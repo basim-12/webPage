@@ -4,9 +4,65 @@
     <title>Web page</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>THIS IS MY PORTFOLIO</h1>
-    <p>This is my first web page</p>
-    <h1>hellooo</h1>
+    <div id="particles-js"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Slideshow">Slideshow</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h1>Welcome to my portfolio</h1>
+        <p>I am Muhammad Basim and this is my webpage.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore officiis vel impedit harum, eaque a sunt amet deserunt earum minus excepturi illum ex officia sapiente fugit doloremque enim vitae! Nulla consequuntur veritatis consequatur repudiandae. Culpa unde dolores dolorem, ullam quas delectus porro in? Accusamus facere dicta molestiae vitae tenetur explicabo ad, suscipit maxime, aliquam quaerat voluptates unde obcaecati laboriosam dolorum quas eius eos cumque aperiam debitis. Pariatur excepturi exercitationem ullam nesciunt adipisci officiis quidem delectus ea quisquam. Ducimus, quibusdam assumenda quam tempore natus quis, veritatis deleniti, tempora dignissimos ad repellendus. Pariatur vitae ex vel doloremque iste accusantium fuga adipisci praesentium?</p>
+    </section>
+
+    <section id="Slideshow" class="Slideshow">
+        <h2>My Work</h2>
+        <div class="Slideshow-container">
+            <div class="slide">
+                <img src="slide1.webp" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="slide2.webp" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="slide3.jpeg" alt="Slide 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    <section id="video" class="video">
+        <h2>Watch my Video</h2>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="vid.MP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 [Basim]. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

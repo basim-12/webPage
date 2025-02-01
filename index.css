@@ -1,5 +1,254 @@
 body
 {
-background-color: aqua;
-text-align: center;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+line-height: 1.6;
+}
+
+header{
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+header nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li{
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero{
+    background: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+.Slideshow, .video, .contact{
+    padding: 2rem;
+    text-align: center;
+}
+.Slideshow-container{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 18px;
+}
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.video-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.video-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form label{
+    margin: 0.5rem 0 0.2rem;
+}
+form input, form textarea{
+    width: 50%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+form button {
+    padding: 0.5rem 2rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero, .slideshow, .video, .contact {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Delay animations for each section */
+.hero {
+    animation-delay: 0.2s;
+}
+
+.slideshow {
+    animation-delay: 0.4s;
+}
+
+.video {
+    animation-delay: 0.6s;
+}
+
+.contact {
+    animation-delay: 0.8s;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6347; /* Change to your preferred hover color */
+}
+
+.hero {
+    background: linear-gradient(135deg, #51597a, #79628f);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+form button {
+    padding: 0.5rem 2rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #ff6347; /* Change to your preferred hover color */
+}
+
+
+:root {
+    --background-color: #121212; /* Dark background */
+    --text-color: #e0e0e0; /* Light text */
+    --header-bg: #1f1f1f; /* Dark header */
+    --header-text: #e0e0e0; /* Light header text */
+    --hero-bg: linear-gradient(135deg, #1e3c72, #2a5298); /* Dark gradient */
+    --button-bg: #444; /* Dark button */
+    --button-hover: #ff4500; /* Button hover color */
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg: #1f1f1f;
+    --header-text: #e0e0e0;
+    --hero-bg: linear-gradient(135deg, #1e3c72, #2a5298);
+    --button-bg: #444;
+    --button-hover: #ff4500;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+}
+
+.hero {
+    background: var(--hero-bg);
+}
+
+form button {
+    background: var(--button-bg);
+}
+
+form button:hover {
+    background: var(--button-hover);
+}
+
+
+
+#particles-js {
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind all other content */
+    background: var(--background-color); /* Match the background color */
 }
